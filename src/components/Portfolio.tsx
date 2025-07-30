@@ -139,102 +139,116 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
+      <section className="py-20 px-4 max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">
           <Briefcase className="inline-block w-8 h-8 mr-2" />
           Experiencia Profesional
         </h2>
         
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <Button
-            variant={activeProjectCategory === "todos" ? "default" : "secondary"}
-            onClick={() => setActiveProjectCategory("todos")}
-          >
-            Todos los Proyectos
-          </Button>
-          <Button
-            variant={activeProjectCategory === "stech" ? "default" : "secondary"}
-            onClick={() => setActiveProjectCategory("stech")}
-          >
-            Stech Limitada
-          </Button>
-          <Button
-            variant={activeProjectCategory === "freelance" ? "default" : "secondary"}
-            onClick={() => setActiveProjectCategory("freelance")}
-          >
-            AR Detailing
-          </Button>
-          <Button
-            variant={activeProjectCategory === "academicos" ? "default" : "secondary"}
-            onClick={() => setActiveProjectCategory("academicos")}
-          >
-            Proyectos Académicos
-          </Button>
+        <div className="flex justify-center mb-12 overflow-x-auto">
+          <div className="flex gap-4 px-4 min-w-max">
+            <Button
+              variant={activeProjectCategory === "todos" ? "default" : "secondary"}
+              onClick={() => setActiveProjectCategory("todos")}
+              className="whitespace-nowrap"
+            >
+              Todos los Proyectos
+            </Button>
+            <Button
+              variant={activeProjectCategory === "stech" ? "default" : "secondary"}
+              onClick={() => setActiveProjectCategory("stech")}
+              className="whitespace-nowrap"
+            >
+              Stech Limitada
+            </Button>
+            <Button
+              variant={activeProjectCategory === "freelance" ? "default" : "secondary"}
+              onClick={() => setActiveProjectCategory("freelance")}
+              className="whitespace-nowrap"
+            >
+              AR Detailing
+            </Button>
+            <Button
+              variant={activeProjectCategory === "academicos" ? "default" : "secondary"}
+              onClick={() => setActiveProjectCategory("academicos")}
+              className="whitespace-nowrap"
+            >
+              Proyectos Académicos
+            </Button>
+          </div>
         </div>
 
-        <div className="grid gap-8">
-          {filteredProjects.map((project, index) => (
-            <Card key={index} className="bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    <h3 className="text-2xl font-bold text-primary mb-2">{project.title}</h3>
-                    <p className="text-accent font-semibold mb-1">{project.company}</p>
-                    <p className="text-muted-foreground mb-1">{project.role}</p>
-                    <p className="text-sm text-muted-foreground mb-4">{project.period}</p>
-                    <p className="text-lg mb-6">{project.description}</p>
+        <div className="overflow-x-auto">
+          <div className="flex gap-8 pb-4" style={{ width: 'max-content' }}>
+            {filteredProjects.map((project, index) => (
+              <Card key={index} className="bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 min-w-[600px] max-w-[700px]">
+                <CardContent className="p-8">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-primary mb-2">{project.title}</h3>
+                      <p className="text-accent font-semibold mb-1">{project.company}</p>
+                      <p className="text-muted-foreground mb-1">{project.role}</p>
+                      <p className="text-sm text-muted-foreground mb-4">{project.period}</p>
+                      <p className="text-lg mb-6">{project.description}</p>
+                    </div>
                     
                     <div className="space-y-2">
                       {project.achievements.map((achievement, i) => (
                         <div key={i} className="flex items-start gap-2">
-                          <div className="w-2 h-2 rounded-full bg-accent mt-2" />
-                          <span className="text-muted-foreground">{achievement}</span>
+                          <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                          <span className="text-muted-foreground text-sm">{achievement}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="font-semibold text-primary mb-4">Tecnologías</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, i) => (
-                        <Badge key={i} variant="secondary" className="bg-secondary/50">
-                          {tech}
-                        </Badge>
-                      ))}
+                    
+                    <div>
+                      <h4 className="font-semibold text-primary mb-4">Tecnologías</h4>
+                      <div className="overflow-x-auto">
+                        <div className="flex gap-2 pb-2 min-w-max">
+                          {project.technologies.map((tech, i) => (
+                            <Badge key={i} variant="secondary" className="bg-secondary/50 whitespace-nowrap">
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
+      <section className="py-20 px-4 max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">
           <Code2 className="inline-block w-8 h-8 mr-2" />
           Habilidades Técnicas
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          {Object.entries(skills).map(([category, skillList]) => (
-            <Card key={category} className="bg-gradient-card border-border/50">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-4 capitalize">
-                  {category === 'devops' ? 'DevOps' : category === 'frontend' ? 'Frontend' : category === 'backend' ? 'Backend' : category === 'databases' ? 'Bases de Datos' : 'Herramientas'}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {skillList.map((skill, i) => (
-                    <Badge key={i} variant="outline" className="border-accent/50 text-accent">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="overflow-x-auto">
+          <div className="flex gap-6 pb-4 min-w-max">
+            {Object.entries(skills).map(([category, skillList]) => (
+              <Card key={category} className="bg-gradient-card border-border/50 min-w-[300px]">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-primary mb-4 capitalize">
+                    {category === 'devops' ? 'DevOps' : category === 'frontend' ? 'Frontend' : category === 'backend' ? 'Backend' : category === 'databases' ? 'Bases de Datos' : 'Herramientas'}
+                  </h3>
+                  <div className="overflow-x-auto">
+                    <div className="flex gap-2 pb-2 min-w-max">
+                      {skillList.map((skill, i) => (
+                        <Badge key={i} variant="outline" className="border-accent/50 text-accent whitespace-nowrap">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
