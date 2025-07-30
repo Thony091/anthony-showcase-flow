@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# Portafolio Personal de Anthony Flores Ramos | Desarrollador de Software
 
-## Project info
+> Este es el repositorio de mi portafolio personal, un sitio web interactivo desarrollado en React para mostrar mis proyectos, experiencia y habilidades en el desarrollo de software.
 
-**URL**: https://lovable.dev/projects/36340e58-78c3-4896-8547-a2bb804b96d6
+### [🚀 Ver el sitio en vivo](URL_DE_TU_PORTAFOLIO_EN_VIVO)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📜 Sobre este proyecto
 
-**Use Lovable**
+Este portafolio es mi carta de presentación digital. Fue diseñado y desarrollado para ofrecer una visión clara y concisa de mi trayectoria profesional, mis capacidades técnicas y los proyectos en los que he tenido la oportunidad de trabajar. El objetivo es centralizar mi información profesional en un solo lugar, facilitando que reclutadores, colegas y entusiastas de la tecnología puedan conocer mi trabajo.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/36340e58-78c3-4896-8547-a2bb804b96d6) and start prompting.
+## ✨ Secciones y Características Principales
 
-Changes made via Lovable will be committed automatically to this repo.
+El portafolio está estructurado en las siguientes secciones clave:
 
-**Use your preferred IDE**
+*   **Sobre mí:** Una introducción personal que destaca mi motivación, mi enfoque colaborativo y mi pasión por el aprendizaje continuo.
+*   **Experiencia Profesional:** Un recorrido por mi experiencia laboral, detallando mis responsabilidades y logros en el desarrollo de aplicaciones móviles con Flutter en empresas como **Stech Limitada** y **AR Detailing**.
+*   **Habilidades Técnicas:** Un listado organizado de mis competencias en tecnologías **Backend** (Java, Spring Boot, Node.js, Python) y **Frontend** (JavaScript, TypeScript, Angular, React).
+*   **Educación y Certificaciones:** Información sobre mi formación académica en **Duoc UC** y certificaciones relevantes como la de **Desarrollador Fullstack Java Trainee**.
+*   **Proyectos:** Una sección interactiva donde se pueden filtrar y ver detalles de mis proyectos profesionales y académicos.
+*   **Contacto:** Información directa para facilitar la comunicación a través de email, teléfono o LinkedIn.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tecnologías utilizadas para construir este sitio
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Este proyecto fue construido utilizando un stack moderno de tecnologías frontend, asistido por la plataforma [Lovable.dev](https://lovable.dev/).
 
-Follow these steps:
+*   **Framework:** React
+*   **Lenguaje:** TypeScript
+*   **Build Tool:** Vite
+*   **Estilos:** Tailwind CSS
+*   **Componentes UI:** shadcn-ui
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 💻 ¿Cómo ejecutar este proyecto localmente?
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Si deseas explorar el código o ejecutar una versión local, solo necesitas tener [Node.js](https://nodejs.org/) y npm instalados.
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+**Paso 1: Clona el repositorio**
+```bash
+git clone <URL_DE_TU_REPOSITORIO_GIT>
+```
+**Paso 2: Navega al directorio del proyecto**
+```bash
+cd <NOMBRE_DE_LA_CARPETA_DEL_PROYECTO>
 ```
 
-**Edit a file directly in GitHub**
+**Paso 3: Instala las dependencias necesarias**
+```bash
+npm install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+**Paso 4: Inicia el servidor de desarrollo**
+Esto iniciará el proyecto en http://localhost:5173 (o un puerto similar) con recarga automática.
+```bash
+npm run dev
+```
+## 📄 Contacto
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/36340e58-78c3-4896-8547-a2bb804b96d6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+¡Gracias por visitar mi proyecto! Si estás interesado en colaborar o tienes alguna pregunta, no dudes en contactarme.
+LinkedIn: linkedin.com/in/thony-flores
+Email: anthony.g91@icloud.com
