@@ -2,7 +2,7 @@
 
 > Este es el repositorio de mi portafolio personal, un sitio web interactivo desarrollado en React para mostrar mis proyectos, experiencia y habilidades en el desarrollo de software.
 
-### [🚀 Ver el sitio en vivo](https://thony091.github.io/anthony-showcase-flow/)
+### [🚀 Ver el sitio en vivo](https://thony091.github.io/thony-portfolio/)
 
 ---
 
