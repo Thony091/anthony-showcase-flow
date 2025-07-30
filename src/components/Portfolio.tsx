@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Phone, MapPin, Linkedin, Code2, Briefcase, GraduationCap, Award, Globe, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import HorizontalScroll from "./HorizontalScroll";
 
 const Portfolio = () => {
   const [activeProjectCategory, setActiveProjectCategory] = useState("todos");
@@ -69,6 +70,11 @@ const Portfolio = () => {
     ? projects 
     : projects.filter(project => project.category === activeProjectCategory);
 
+  const scrollToAbout = () => {
+    const aboutSection = document.querySelector('#about-section');
+    aboutSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
@@ -97,7 +103,7 @@ const Portfolio = () => {
             </div>
           </div>
           
-          <Button variant="default" size="lg" className="animate-glow">
+          <Button variant="default" size="lg" className="animate-glow" onClick={scrollToAbout}>
             <ChevronDown className="w-4 h-4 mr-2" />
             Explorar Portfolio
           </Button>
@@ -105,7 +111,7 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
+      <section id="about-section" className="py-20 px-4 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6 text-primary">Sobre mí</h2>
@@ -178,7 +184,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        <HorizontalScroll>
           <div className="flex gap-8 pb-4" style={{ width: 'max-content' }}>
             {filteredProjects.map((project, index) => (
               <Card key={index} className="bg-gradient-card border-border/50 hover:shadow-glow transition-all duration-300 min-w-[600px] max-w-[700px]">
@@ -218,7 +224,7 @@ const Portfolio = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </HorizontalScroll>
       </section>
 
       {/* Skills Section */}
@@ -228,7 +234,7 @@ const Portfolio = () => {
           Habilidades Técnicas
         </h2>
         
-        <div className="overflow-x-auto">
+        <HorizontalScroll>
           <div className="flex gap-6 pb-4 min-w-max">
             {Object.entries(skills).map(([category, skillList]) => (
               <Card key={category} className="bg-gradient-card border-border/50 min-w-[300px]">
@@ -249,7 +255,7 @@ const Portfolio = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </HorizontalScroll>
       </section>
 
       {/* Education Section */}

@@ -104,7 +104,15 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
   body {
     @apply bg-background text-foreground;
   }
